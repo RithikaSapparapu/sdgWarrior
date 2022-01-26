@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class StartScript : MonoBehaviour
 {
     public void StartGame(){
-        SceneManager.LoadScene("sdgWarrior");    
+        SceneManager.LoadScene("sdgWarrior");
     }    
 }
