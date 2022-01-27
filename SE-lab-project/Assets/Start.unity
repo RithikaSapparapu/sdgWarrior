@@ -2240,17 +2240,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1080491702403314, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_Name
+      value: INSTRUCTIONS
+      objectReference: {fileID: 0}
     - target: {fileID: 1107284712534194, guid: b18f8976219e1754dba4931c56a32810, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341132577047810, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351642501788410, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497261153358026, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_Name
+      value: START
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515074578348416, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_Name
+      value: CONTROLS
       objectReference: {fileID: 0}
     - target: {fileID: 1542577206270056, guid: b18f8976219e1754dba4931c56a32810, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1847552042060976, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893659511822568, guid: b18f8976219e1754dba4931c56a32810, type: 3}
+      propertyPath: m_Name
+      value: GameStartCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1893659511822568, guid: b18f8976219e1754dba4931c56a32810, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279667159768452, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_text
+      value: WELCOME!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279667159768452, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279667159768452, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279667159768452, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 114343458140157096, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
@@ -2336,6 +2384,26 @@ PrefabInstance:
         type: 3}
       propertyPath: alwaysDisplayMouse
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114401713877353974, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_text
+      value: START
+      objectReference: {fileID: 0}
+    - target: {fileID: 114401713877353974, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114401713877353974, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114401713877353974, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 114410987875769036, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
@@ -2481,6 +2549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114441227319997522, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114457350830320588, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
@@ -2634,6 +2707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
+      propertyPath: m_text
+      value: INSTRUCTIONS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
       propertyPath: m_fontSize
       value: 35.15
       objectReference: {fileID: 0}
@@ -2644,8 +2722,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582451962095918, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114715681576327906, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_text
+      value: CONTROLS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114715681576327906, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114715681576327906, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114715681576327906, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 224018907443982040, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
@@ -2931,6 +3044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224896174465747310, guid: b18f8976219e1754dba4931c56a32810,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224917525346920010, guid: b18f8976219e1754dba4931c56a32810,
         type: 3}
