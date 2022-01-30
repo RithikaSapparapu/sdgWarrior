@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Gamekit3D;
 using UnityEngine;
 using UnityEngine.Playables;
+using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -12,6 +13,15 @@ public class QuestionUIScript : MonoBehaviour
     public bool alwaysDisplayMouse;
     public GameObject QuestionUICanvas;
     public GameObject Question2UICanvas;
+    public GameObject Question3UICanvas;
+    public GameObject CorrectCanvas;
+    public GameObject WrongCanvas;
+    public GameObject ScoreBoardCanvas;
+    TextMeshProUGUI text;
+    public int score = 0;
+    public int question_count = 0;
+    public int wrong = 0;
+    //public GameObject Damageable;
     //public GameObject optionsCanvas;
     //public GameObject controlsCanvas;
     //public GameObject audioCanvas;
@@ -40,11 +50,11 @@ public class QuestionUIScript : MonoBehaviour
         if(check)
         {
             rnd = Random.value;
-            Debug.Log(rnd);
+            //Debug.Log(rnd);
             a = (int)(rnd*10);
-            Debug.Log(a);
-            a = a%2;
-            Debug.Log(a);
+            //Debug.Log(a);
+            a = a%3;
+            //Debug.Log(a);
             SwitchPauseState();
             check = false;
         }
@@ -57,19 +67,55 @@ public class QuestionUIScript : MonoBehaviour
         }
 
         public void correctAnswer(){
+            score++;
+            question_count++;
             m_InPause = true;
             SwitchPauseState();
+            Debug.Log("Correct ans. found");
+            Debug.Log("Score: " + score);
+            GameObject Child = ScoreBoardCanvas.transform.GetChild(1).gameObject;
+            GameObject GrandChild = Child.transform.GetChild(0).gameObject;
+            text = GrandChild.GetComponent<TextMeshProUGUI>();
+            text.text = "Correct : "+score+"\tWrong  : "+wrong+"\tTotal     : 17";
+            StartCoroutine(Text());
+        }
+
+        IEnumerator Text()  //  <-  its a standalone method
+        {
+            CorrectCanvas.SetActive(true);
+            yield return new WaitForSeconds(3);
+            CorrectCanvas.SetActive(false);
         }
 
         public void wrongAnswer(){
-            #if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-		    Application.Quit();
-#endif
+            question_count++;
+            wrong++;
+            m_InPause = true;
+            SwitchPauseState();
+            //Debug.Log("Wrong ans. found");
+            //Debug.Log("Score: " + score);
+            GameObject Child = ScoreBoardCanvas.transform.GetChild(1).gameObject;
+            GameObject GrandChild = Child.transform.GetChild(0).gameObject;
+            text = GrandChild.GetComponent<TextMeshProUGUI>();
+            text.text = "Correct : "+score+"\tWrong  : "+wrong+"\tTotal     : 17";
+            //OnReceiveDamage.Invoke();
+            //Ellen.GetComponent<Damageable>().ApplyDamage(d);
+            StartCoroutine(Text1());
+//             #if UNITY_EDITOR
+//             EditorApplication.isPlaying = false;
+// #else
+// 		    Application.Quit();
+// #endif
         }
 
-        public void chooseA()
+        IEnumerator Text1()  //  <-  its a standalone method
+        {
+            WrongCanvas.SetActive(true);
+            yield return new WaitForSeconds(3);
+            WrongCanvas.SetActive(false);
+        }
+
+        /*public void chooseA()
         {
             m_InPause = true;
             SwitchPauseState();
@@ -101,7 +147,7 @@ public class QuestionUIScript : MonoBehaviour
 #else
 		    Application.Quit();
 #endif
-        }
+        }*/
 
 
     protected void SwitchPauseState()
@@ -137,14 +183,18 @@ public class QuestionUIScript : MonoBehaviour
 
         Time.timeScale = m_InPause ? 1 : 0;
 
-        if(a==1)
+        if(a==0)
         {
             if (QuestionUICanvas)
                 QuestionUICanvas.SetActive(!m_InPause);
         }
-        else{
+        else if(a==1){
             if (Question2UICanvas)
                 Question2UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==2){
+            if (Question3UICanvas)
+                Question3UICanvas.SetActive(!m_InPause);
         }
 
         m_InPause = !m_InPause;
