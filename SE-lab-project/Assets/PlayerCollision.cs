@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     public QuestionUIScript QuestionUIScript;
+    public EndUIScript EndUIScript;
     
     /*public static int getRandom()
     {
@@ -16,10 +17,23 @@ public class PlayerCollision : MonoBehaviour
     {
         Debug.Log("Hit something");
         Debug.Log(col.gameObject.name);
-        if (col.gameObject.name != "DestructibleBox_stepOn"){
+
+        string temp1 = col.gameObject.name;
+        string temp2 = "";
+        if(temp1.Length>=7){
+            for(int i=0; i<7; i++){
+                temp2 += temp1[i];
+            }
+        }
+
+        if (temp2 == "Crystal"){
             QuestionUIScript.SetUp();
         }
-        if (col.gameObject.name == "Crystal"){
+        else if(temp2 == "FinalCrystal"){
+            EndUIScript.SetUp();
+        }
+
+        if (temp2 == "Crystal"){
             Destroy(col.gameObject);
         }
     }

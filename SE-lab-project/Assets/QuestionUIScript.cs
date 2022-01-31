@@ -11,9 +11,33 @@ using UnityEditor;
 public class QuestionUIScript : MonoBehaviour
 {
     public bool alwaysDisplayMouse;
+
     public GameObject QuestionUICanvas;
     public GameObject Question2UICanvas;
     public GameObject Question3UICanvas;
+    public GameObject Question4UICanvas;
+    public GameObject Question5UICanvas;
+    public GameObject Question6UICanvas;
+    public GameObject Question7UICanvas;
+    public GameObject Question8UICanvas;
+    public GameObject Question9UICanvas;
+    public GameObject Question10UICanvas;
+    public GameObject Question11UICanvas;
+    public GameObject Question12UICanvas;
+    public GameObject Question13UICanvas;
+    public GameObject Question14UICanvas;
+    public GameObject Question15UICanvas;
+    public GameObject Question16UICanvas;
+    public GameObject Question17UICanvas;
+    public GameObject Question18UICanvas;
+    public GameObject Question19UICanvas;
+    public GameObject Question20UICanvas;
+    public GameObject Question21UICanvas;
+    public GameObject Question22UICanvas;
+    public GameObject Question23UICanvas;
+    public GameObject Question24UICanvas;
+    public GameObject Question25UICanvas;
+
     public GameObject CorrectCanvas;
     public GameObject WrongCanvas;
     public GameObject ScoreBoardCanvas;
@@ -51,9 +75,9 @@ public class QuestionUIScript : MonoBehaviour
         {
             rnd = Random.value;
             //Debug.Log(rnd);
-            a = (int)(rnd*10);
+            a = (int)(rnd*100);
             //Debug.Log(a);
-            a = a%3;
+            a = a%25;
             //Debug.Log(a);
             SwitchPauseState();
             check = false;
@@ -101,11 +125,6 @@ public class QuestionUIScript : MonoBehaviour
             //OnReceiveDamage.Invoke();
             //Ellen.GetComponent<Damageable>().ApplyDamage(d);
             StartCoroutine(Text1());
-//             #if UNITY_EDITOR
-//             EditorApplication.isPlaying = false;
-// #else
-// 		    Application.Quit();
-// #endif
         }
 
         IEnumerator Text1()  //  <-  its a standalone method
@@ -114,41 +133,6 @@ public class QuestionUIScript : MonoBehaviour
             yield return new WaitForSeconds(3);
             WrongCanvas.SetActive(false);
         }
-
-        /*public void chooseA()
-        {
-            m_InPause = true;
-            SwitchPauseState();
-            //SceneController.RestartZone();
-        }
-
-        public void chooseB()
-        {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-		    Application.Quit();
-#endif
-        }
-
-        public void chooseC()
-        {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-		    Application.Quit();
-#endif
-        }
-
-        public void chooseD()
-        {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-		    Application.Quit();
-#endif
-        }*/
-
 
     protected void SwitchPauseState()
     {
@@ -195,6 +179,98 @@ public class QuestionUIScript : MonoBehaviour
         else if(a==2){
             if (Question3UICanvas)
                 Question3UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==3){
+            if (Question4UICanvas)
+                Question4UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==4){
+            if (Question5UICanvas)
+                Question5UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==5){
+            if (Question6UICanvas)
+                Question6UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==6){
+            if (Question7UICanvas)
+                Question7UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==7){
+            if (Question8UICanvas)
+                Question8UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==8){
+            if (Question10UICanvas)
+                Question10UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==9){
+            if (Question11UICanvas)
+                Question11UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==10){
+            if (Question12UICanvas)
+                Question12UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==11){
+            if (Question13UICanvas)
+                Question13UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==12){
+            if (Question14UICanvas)
+                Question14UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==13){
+            if (Question15UICanvas)
+                Question15UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==14){
+            if (Question16UICanvas)
+                Question16UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==15){
+            if (Question17UICanvas)
+                Question17UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==16){
+            if (Question18UICanvas)
+                Question18UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==17){
+            if (Question19UICanvas)
+                Question19UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==18){
+            if (Question20UICanvas)
+                Question20UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==19){
+            if (Question21UICanvas)
+                Question21UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==20){
+            if (Question22UICanvas)
+                Question22UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==21){
+            if (Question23UICanvas)
+                Question23UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==22){
+            if (Question24UICanvas)
+                Question24UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==23){
+            if (Question25UICanvas)
+                Question25UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==24){
+            if (Question3UICanvas)
+                Question3UICanvas.SetActive(!m_InPause);
+        }
+        else if(a==25){
+            if (Question9UICanvas)
+                Question9UICanvas.SetActive(!m_InPause);
         }
 
         m_InPause = !m_InPause;
