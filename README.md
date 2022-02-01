@@ -1,6 +1,7 @@
 # sdgWarrior
-1. Description of the game
+# 1. Description of the game
 Idea and Uniqueness
+# 
 Test players’ awareness of Sustainable Development Goals in the form of question pop-ups.
 The game smoothly tries to implant the ideologies of SDGs by letting players immerse themselves in the fantasy 3D simulated game environment.
 Game Play
