@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Gamekit3D;
 using UnityEngine;
 using UnityEngine.Playables;
+using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -14,6 +15,8 @@ public class EndUIScript : MonoBehaviour
     public GameObject optionsCanvas;
     public GameObject controlsCanvas;
     public GameObject audioCanvas;
+    public QuestionUIScript QuestionUIScript;
+    TextMeshProUGUI text;
 
     protected bool m_InPause;
     protected PlayableDirector[] m_Directors;
@@ -98,8 +101,16 @@ public class EndUIScript : MonoBehaviour
 
         Time.timeScale = m_InPause ? 1 : 0;
 
-        if (GameOverCanvas)
+        if (GameOverCanvas){
+            GameObject Child = GameOverCanvas.transform.GetChild(2).gameObject;
+            //GameObject GrandChild = Child.transform.GetChild(0).gameObject;
+            //Debug.Log(QuestionUIScript.score);
+            int score = QuestionUIScript.score;
+            int wrong = QuestionUIScript.wrong;
+            text = Child.GetComponent<TextMeshProUGUI>();
+            text.text = "Correct : "+score+"\tWrong  : "+wrong+"\tTotal     : 17";
             GameOverCanvas.SetActive(!m_InPause);
+        }
 
         if (optionsCanvas)
             optionsCanvas.SetActive(false);
