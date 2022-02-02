@@ -29,7 +29,7 @@ public class PlayerCollision : MonoBehaviour
         if (temp2 == "Crystal"){
             QuestionUIScript.SetUp();
         }
-        else if(temp2 == "FinalCrystal"){
+        else if(temp1 == "FinishCrystal"){
             EndUIScript.SetUp();
         }
 
