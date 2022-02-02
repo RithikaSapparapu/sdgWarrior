@@ -12,7 +12,7 @@ Falling into an acid pool leads to immediate death(loss of all remaining lives).
 ### Reward system
 Going near crystals triggers question pop-ups, answering correctly increases the score.
 As of now, there are no negative points on wrong answers, since our aim is to make players explore the game.
-Here are some screenshots of the game:
+Here are some screenshots of the game:<br/>
 <img src="images/menubar.png" height="400" width="700"><br/>
 <img src="images/start.png" height="400" width="700"><br/>
 <img src="images/acidpool.png" height="400" width="700"><br/>
