@@ -55,9 +55,17 @@ public class QuestionUIScript : MonoBehaviour
     protected bool m_InPause;
     protected PlayableDirector[] m_Directors;
     protected bool check = false;
+    public bool[] visitedQues = new bool[25];
+    bool flag = true;
     // Start is called before the first frame update
     public void SetUp()
     {
+        if(flag == true){
+            for (int i = 0; i < 25; i++) {
+                visitedQues[i] = false;
+            }
+            flag = false;
+        }
         if (!alwaysDisplayMouse)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -71,7 +79,7 @@ public class QuestionUIScript : MonoBehaviour
 
         m_Directors = FindObjectsOfType<PlayableDirector> ();
         check = true;
-        if(check)
+        while(check)
         {
             rnd = Random.value;
             //Debug.Log(rnd);
@@ -79,8 +87,11 @@ public class QuestionUIScript : MonoBehaviour
             //Debug.Log(a);
             a = a%25;
             //Debug.Log(a);
-            SwitchPauseState();
-            check = false;
+            if(!visitedQues[a]){
+                visitedQues[a] = true;
+                check = false;
+                SwitchPauseState();
+            }
         }
     }
 
