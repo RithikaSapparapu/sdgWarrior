@@ -32,7 +32,7 @@ As of now, the game runs only on Desktop.
 * Step 1:Step1: Go to the given below drive link and download the “SDG Warrior” folder.
 https://drive.google.com/drive/folders/1g6ptiUlc2ENcYO5dasVxOamjFUCZL4dL
 * Step2:Extract the zip folder, go into (“SDG Warrior-20220203T032118Z-001\SDG Warrior”) and open “SDG_Warrior.exe”.
-<img src="images/filesc.jpeg" height="400" width="700"><br/>
+<img src="images/filesc.jpeg" height="400" width="600"><br/>
 * That’s it, enjoy the game.
 ### Pull from GitHub Repository: 
 * Step1: Open an empty project in Unity
@@ -40,10 +40,10 @@ https://drive.google.com/drive/folders/1g6ptiUlc2ENcYO5dasVxOamjFUCZL4dL
 https://assetstore.unity.com/packages/templates/tutorials/3d-game-kit-115747
 * Step3: Clone the repository from:
 https://github.com/RithikaSapparapu/sdgWarrior
-* Step4: In the clone folder go to Documents => GitHub => sdgWarrior => SE-lab-project =>    Assets and copy all files.
-<img src="images/git1.jpeg" height="400" width="700"><br/>
-* Step5: Now go to your previously created empty project folder in your explorer, the path will be something like My project (5) => Assets, then delete all other files and folders except 3DGamekit.
-<img src="images/git2.jpeg" height="400" width="700"><br/>
+* Step4: In the clone folder go to Documents => GitHub => sdgWarrior => SE-lab-project =>    Assets and copy all files.<br/>
+<img src="images/git1.jpeg" height="400" width="600"><br/>
+* Step5: Now go to your previously created empty project folder in your explorer, the path will be something like My project (5) => Assets, then delete all other files and folders except 3DGamekit.<br/>
+<img src="images/git2.jpeg" height="400" width="600"><br/>
 * Step6: Now paste previously copied files here. Go back to Unity platform(takes some time to refresh) and play the scene “sdgWarrior”.
 
 ## 5. Contribution
