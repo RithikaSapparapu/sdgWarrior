@@ -32,7 +32,7 @@ As of now, the game runs only on Desktop.
 * Step 1:Step1: Go to the given below drive link and download the “SDG Warrior” folder.
 https://drive.google.com/drive/folders/1g6ptiUlc2ENcYO5dasVxOamjFUCZL4dL
 * Step2:Extract the zip folder, go into (“SDG Warrior-20220203T032118Z-001\SDG Warrior”) and open “SDG_Warrior.exe”.
-
+<img src="images/filesc.png" height="400" width="700"><br/>
 * That’s it, enjoy the game.
 ### Pull from GitHub Repository: 
 * Step1: Open an empty project in Unity
